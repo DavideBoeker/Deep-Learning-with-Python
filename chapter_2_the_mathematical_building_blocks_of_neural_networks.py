@@ -10,14 +10,6 @@ from keras import layers
 
 
 
-
-def main():
-
-    chapter_2()
-
-
-
-
 def chapter_2(): 
 
     # Example 1: A first look at neural networks
@@ -87,6 +79,6 @@ def chapter_2():
 
 
 if __name__ == "__main__":
-    main()
+    chapter_2()
 
     
