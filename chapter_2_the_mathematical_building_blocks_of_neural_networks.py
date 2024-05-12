@@ -75,6 +75,9 @@ def chapter_2():
     digit = train_images[4]
     plt.imshow(digit, cmap=plt.cm.binary)
     plt.show()
+
+
+    
     
 
 
