@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import sklearn
 import tensorflow as tf
+import matplotlib.pyplot as plt
 
 # Import specific libraries
 from keras import layers
@@ -10,7 +11,14 @@ from keras import layers
 
 
 
-def main(): 
+def main():
+
+    chapter_2()
+
+
+
+
+def chapter_2(): 
 
     # Example 1: A first look at neural networks
 
@@ -60,6 +68,14 @@ def main():
     print()
     print(f"test_acc: {test_acc}")
     print()
+
+
+
+    ### Listing 2.8: Displaying the fourth digit
+    digit = train_images[4]
+    plt.imshow(digit, cmap=plt.cm.binary)
+    plt.show()
+    
 
 
 
