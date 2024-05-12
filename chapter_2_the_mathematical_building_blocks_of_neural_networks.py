@@ -26,6 +26,10 @@ def chapter_2():
     mnist = tf.keras.datasets.mnist
     (train_images, train_labels), (test_images, test_labels) = mnist.load_data()
 
+    # Reshape the input data
+    train_images = train_images.reshape(-1, 28, 28, 1)
+    test_images = test_images.reshape(-1, 28, 28, 1)
+
 
     ### Listing 2.2: The network architecture
     model = tf.keras.Sequential([
@@ -72,12 +76,12 @@ def chapter_2():
 
 
     ### Listing 2.8: Displaying the fourth digit
-    digit = train_images[4]
+    digit = train_images[4].reshape(28, 28)  # Reshape the digit to (28, 28)
     plt.imshow(digit, cmap=plt.cm.binary)
     plt.show()
 
 
-    
+
     
 
 
